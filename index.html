@@ -10,9 +10,11 @@
     <script>
         // Program where the user plays sciccors paper rock with the computer
 
+        // Getting input of user and computer
         const player_selection = prompt("Please choose between Rock, Paper and Scissors: ");
         const computer_selection = getComputerChoice();
 
+        // Object to help with win condition
         const win_condition = { 
             rock: "scissors",
             paper: "rock",
@@ -34,9 +36,11 @@
         }
         }
 
+        // Checking both user and computer output
         console.log(computer_selection);
         console.log(player_selection);
 
+        // Game function
         function playround(player_selection, computer_selection) {
             if (player_selection == computer_selection) {
                 console.log("It's a tie!");
@@ -48,7 +52,7 @@
         }
 
 
-
+        // Calling game function
         playround(player_selection, computer_selection);
 
 
