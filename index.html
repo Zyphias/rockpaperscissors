@@ -13,6 +13,12 @@
         const player_selection = prompt("Please choose between Rock, Paper and Scissors: ");
         const computer_selection = getComputerChoice();
 
+        const win_condition = { 
+            rock: "scissors",
+            paper: "rock",
+            scissors: "paper",
+        }
+
 
         function getComputerChoice() {
         // Randomiser needed for either 1, 2 or 3
@@ -28,14 +34,22 @@
         }
         }
 
-        console.log(getComputerChoice());
-    
+        console.log(computer_selection);
         console.log(player_selection);
 
         function playround(player_selection, computer_selection) {
+            if (player_selection == computer_selection) {
+                console.log("It's a tie!");
+            } else if (win_condition[player_selection] === computer_selection) {
+                console.log("You win this game!");
+            } else {
+                console.log("You lost this game");
+            }
         }
 
 
+
+        playround(player_selection, computer_selection);
 
 
     </script>
