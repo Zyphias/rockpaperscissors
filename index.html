@@ -7,6 +7,38 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
+    <script>
+        // Program where the user plays sciccors paper rock with the computer
+
+        const player_selection = prompt("Please choose between Rock, Paper and Scissors: ");
+        const computer_selection = getComputerChoice();
+
+
+        function getComputerChoice() {
+        // Randomiser needed for either 1, 2 or 3
+        let compChoice = ["rock", "paper", "scissors"];
+        let randomiseChoice = Math.floor(Math.random() * compChoice.length + 1) 
+    
+        if (randomiseChoice == 1) {
+            return "rock";
+        } else if (randomiseChoice == 2) {
+            return "paper";
+        } else if (randomiseChoice == 3) {
+            return "scissors";
+        }
+        }
+
+        console.log(getComputerChoice());
+    
+        console.log(player_selection);
+
+        function playround(player_selection, computer_selection) {
+        }
+
+
+
+
+    </script>
     
 </body>
 </html>
